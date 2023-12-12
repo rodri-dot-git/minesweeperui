@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CEBEB30B2B28FBEC000DFDD5 /* minesweeperuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBEB30A2B28FBEC000DFDD5 /* minesweeperuiApp.swift */; };
-		CEBEB30D2B28FBEC000DFDD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBEB30C2B28FBEC000DFDD5 /* ContentView.swift */; };
-		CEBEB30F2B28FBEE000DFDD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEBEB30E2B28FBEE000DFDD5 /* Assets.xcassets */; };
-		CEBEB3122B28FBEE000DFDD5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEBEB3112B28FBEE000DFDD5 /* Preview Assets.xcassets */; };
+		CEBEB3252B28FCC8000DFDD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBEB3202B28FCC8000DFDD5 /* ContentView.swift */; };
+		CEBEB3262B28FCC8000DFDD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEBEB3212B28FCC8000DFDD5 /* Assets.xcassets */; };
+		CEBEB3272B28FCC8000DFDD5 /* minesweeperuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBEB3222B28FCC8000DFDD5 /* minesweeperuiApp.swift */; };
+		CEBEB3282B28FCC8000DFDD5 /* Preview Content in Resources */ = {isa = PBXBuildFile; fileRef = CEBEB3232B28FCC8000DFDD5 /* Preview Content */; };
+		CEBEB32B2B28FCEE000DFDD5 /* MinesweeperViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBEB32A2B28FCEE000DFDD5 /* MinesweeperViewModel.swift */; };
+		CEBEB32D2B28FCF2000DFDD5 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBEB32C2B28FCF2000DFDD5 /* Tile.swift */; };
+		CEBEB32F2B28FCF5000DFDD5 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBEB32E2B28FCF5000DFDD5 /* TileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CEBEB3072B28FBEC000DFDD5 /* minesweeperui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = minesweeperui.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEBEB30A2B28FBEC000DFDD5 /* minesweeperuiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = minesweeperuiApp.swift; sourceTree = "<group>"; };
-		CEBEB30C2B28FBEC000DFDD5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		CEBEB30E2B28FBEE000DFDD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CEBEB3112B28FBEE000DFDD5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CEBEB3202B28FCC8000DFDD5 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = minesweeperui/ContentView.swift; sourceTree = "<group>"; };
+		CEBEB3212B28FCC8000DFDD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = minesweeperui/Assets.xcassets; sourceTree = "<group>"; };
+		CEBEB3222B28FCC8000DFDD5 /* minesweeperuiApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = minesweeperuiApp.swift; path = minesweeperui/minesweeperuiApp.swift; sourceTree = "<group>"; };
+		CEBEB3232B28FCC8000DFDD5 /* Preview Content */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Preview Content"; path = "minesweeperui/Preview Content"; sourceTree = "<group>"; };
+		CEBEB32A2B28FCEE000DFDD5 /* MinesweeperViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinesweeperViewModel.swift; sourceTree = "<group>"; };
+		CEBEB32C2B28FCF2000DFDD5 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		CEBEB32E2B28FCF5000DFDD5 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +41,11 @@
 		CEBEB2FE2B28FBEC000DFDD5 = {
 			isa = PBXGroup;
 			children = (
-				CEBEB3092B28FBEC000DFDD5 /* minesweeperui */,
+				CEBEB3212B28FCC8000DFDD5 /* Assets.xcassets */,
+				CEBEB3302B28FD05000DFDD5 /* components */,
+				CEBEB3202B28FCC8000DFDD5 /* ContentView.swift */,
+				CEBEB3222B28FCC8000DFDD5 /* minesweeperuiApp.swift */,
+				CEBEB3232B28FCC8000DFDD5 /* Preview Content */,
 				CEBEB3082B28FBEC000DFDD5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,23 +58,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CEBEB3092B28FBEC000DFDD5 /* minesweeperui */ = {
+		CEBEB3302B28FD05000DFDD5 /* components */ = {
 			isa = PBXGroup;
 			children = (
-				CEBEB30A2B28FBEC000DFDD5 /* minesweeperuiApp.swift */,
-				CEBEB30C2B28FBEC000DFDD5 /* ContentView.swift */,
-				CEBEB30E2B28FBEE000DFDD5 /* Assets.xcassets */,
-				CEBEB3102B28FBEE000DFDD5 /* Preview Content */,
+				CEBEB32A2B28FCEE000DFDD5 /* MinesweeperViewModel.swift */,
+				CEBEB32C2B28FCF2000DFDD5 /* Tile.swift */,
+				CEBEB32E2B28FCF5000DFDD5 /* TileView.swift */,
 			);
-			path = minesweeperui;
-			sourceTree = "<group>";
-		};
-		CEBEB3102B28FBEE000DFDD5 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				CEBEB3112B28FBEE000DFDD5 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
+			name = components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +100,7 @@
 				TargetAttributes = {
 					CEBEB3062B28FBEC000DFDD5 = {
 						CreatedOnToolsVersion = 15.0.1;
+						LastSwiftMigration = 1500;
 					};
 				};
 			};
@@ -125,8 +127,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEBEB3122B28FBEE000DFDD5 /* Preview Assets.xcassets in Resources */,
-				CEBEB30F2B28FBEE000DFDD5 /* Assets.xcassets in Resources */,
+				CEBEB3282B28FCC8000DFDD5 /* Preview Content in Resources */,
+				CEBEB3262B28FCC8000DFDD5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +139,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEBEB30D2B28FBEC000DFDD5 /* ContentView.swift in Sources */,
-				CEBEB30B2B28FBEC000DFDD5 /* minesweeperuiApp.swift in Sources */,
+				CEBEB3272B28FCC8000DFDD5 /* minesweeperuiApp.swift in Sources */,
+				CEBEB3252B28FCC8000DFDD5 /* ContentView.swift in Sources */,
+				CEBEB32B2B28FCEE000DFDD5 /* MinesweeperViewModel.swift in Sources */,
+				CEBEB32F2B28FCF5000DFDD5 /* TileView.swift in Sources */,
+				CEBEB32D2B28FCF2000DFDD5 /* Tile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +274,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"minesweeperui/Preview Content\"";
@@ -288,6 +294,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = deleoncastilla.com.minesweeperui;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -298,6 +305,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"minesweeperui/Preview Content\"";
