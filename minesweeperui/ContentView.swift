@@ -11,29 +11,29 @@ struct ContentView: View {
     @ObservedObject var viewModel = MinesweeperViewModel()
     
     var body: some View {
-            VStack {
-                gameStatusView
-                gameGridView
-            }
+        VStack {
+            gameStatusView
+            gameGridView
         }
+    }
 
-        var gameStatusView: some View {
-            HStack() {
-                Text(viewModel.gameStatusText)
-                    .font(.headline)
-                    .padding()
-                Button("Restart Game") {
-                    viewModel.restartGame()
-                }
+    var gameStatusView: some View {
+        HStack() {
+            Text(viewModel.gameStatusText)
+                .font(.headline)
+                .padding()
+            Button("Restart Game") {
+                viewModel.restartGame()
             }
         }
+    }
 
     var gameGridView: some View {
         VStack(spacing: 0) {
             ForEach(0..<viewModel.rows, id: \.self) { row in
                 HStack(spacing: 0) {
                     ForEach(0..<viewModel.columns, id: \.self) { column in
-                        TileView(tile: viewModel.grid[row][column])
+                        TileView(viewModel: viewModel, tile: viewModel.grid[row][column])
                         .onTapGesture {
                             viewModel.tapTile(atRow: row, column: column)
                         }
@@ -60,7 +60,8 @@ extension MinesweeperViewModel {
     }
 }
 
-
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }

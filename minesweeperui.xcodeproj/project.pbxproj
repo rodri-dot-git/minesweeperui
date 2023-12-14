@@ -14,6 +14,7 @@
 		CEBEB32B2B28FCEE000DFDD5 /* MinesweeperViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBEB32A2B28FCEE000DFDD5 /* MinesweeperViewModel.swift */; };
 		CEBEB32D2B28FCF2000DFDD5 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBEB32C2B28FCF2000DFDD5 /* Tile.swift */; };
 		CEBEB32F2B28FCF5000DFDD5 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBEB32E2B28FCF5000DFDD5 /* TileView.swift */; };
+		CEBEB3332B29021B000DFDD5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBEB3322B29021B000DFDD5 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		CEBEB32A2B28FCEE000DFDD5 /* MinesweeperViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinesweeperViewModel.swift; sourceTree = "<group>"; };
 		CEBEB32C2B28FCF2000DFDD5 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		CEBEB32E2B28FCF5000DFDD5 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
+		CEBEB3322B29021B000DFDD5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,9 +44,10 @@
 			isa = PBXGroup;
 			children = (
 				CEBEB3212B28FCC8000DFDD5 /* Assets.xcassets */,
-				CEBEB3302B28FD05000DFDD5 /* components */,
-				CEBEB3202B28FCC8000DFDD5 /* ContentView.swift */,
 				CEBEB3222B28FCC8000DFDD5 /* minesweeperuiApp.swift */,
+				CEBEB3202B28FCC8000DFDD5 /* ContentView.swift */,
+				CEBEB3322B29021B000DFDD5 /* SettingsView.swift */,
+				CEBEB3302B28FD05000DFDD5 /* components */,
 				CEBEB3232B28FCC8000DFDD5 /* Preview Content */,
 				CEBEB3082B28FBEC000DFDD5 /* Products */,
 			);
@@ -142,6 +145,7 @@
 				CEBEB3272B28FCC8000DFDD5 /* minesweeperuiApp.swift in Sources */,
 				CEBEB3252B28FCC8000DFDD5 /* ContentView.swift in Sources */,
 				CEBEB32B2B28FCEE000DFDD5 /* MinesweeperViewModel.swift in Sources */,
+				CEBEB3332B29021B000DFDD5 /* SettingsView.swift in Sources */,
 				CEBEB32F2B28FCF5000DFDD5 /* TileView.swift in Sources */,
 				CEBEB32D2B28FCF2000DFDD5 /* Tile.swift in Sources */,
 			);

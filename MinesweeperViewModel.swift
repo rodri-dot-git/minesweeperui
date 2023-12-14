@@ -6,14 +6,15 @@
 //
 
 import Foundation
+import UIKit
 
 class MinesweeperViewModel: ObservableObject {
     @Published var grid: [[Tile]] = []
+    @Published var rows = 20 // Default value
+    @Published var columns = 10 // Default value
+    @Published var mineCount = 20 // Default value
     @Published var gameStatus: GameStatus = .playing
     private var gameStarted = false
-    let rows: Int = 10 // Adjust as needed
-    let columns: Int = 10 // Adjust as needed
-    let mineCount: Int = 10 // Adjust as needed
     
     enum GameStatus {
         case playing, won, lost
@@ -40,8 +41,8 @@ class MinesweeperViewModel: ObservableObject {
             let randomRow = Int.random(in: 0..<rows)
             let randomColumn = Int.random(in: 0..<columns)
 
-            // Check if the tile is not the first clicked tile and does not have a mine
-            if !(randomRow == excludedRow && randomColumn == excludedColumn) && !grid[randomRow][randomColumn].isMine {
+            // Check if the tile is not the first clicked tile, not adjacent to it, and does not already have a mine
+            if isSafeToPlaceMine(atRow: randomRow, column: randomColumn, excludedRow: excludedRow, excludedColumn: excludedColumn) {
                 grid[randomRow][randomColumn].isMine = true
                 minesPlaced += 1
             }
@@ -53,6 +54,13 @@ class MinesweeperViewModel: ObservableObject {
                 grid[row][column].adjacentMines = countAdjacentMines(row: row, column: column)
             }
         }
+    }
+
+    private func isSafeToPlaceMine(atRow row: Int, column: Int, excludedRow: Int, excludedColumn: Int) -> Bool {
+        if abs(row - excludedRow) <= 1 && abs(column - excludedColumn) <= 1 {
+            return false // Tile is the first clicked tile or adjacent to it
+        }
+        return !grid[row][column].isMine // Tile does not already have a mine
     }
     
     private func countAdjacentMines(row: Int, column: Int) -> Int {
@@ -131,11 +139,18 @@ class MinesweeperViewModel: ObservableObject {
     private func checkForWin() -> Bool {
         let nonMineTiles = rows * columns - mineCount
         let revealedTiles = grid.flatMap { $0 }.filter { $0.isRevealed && !$0.isMine }.count
-        return revealedTiles == nonMineTiles
+        
+        if revealedTiles == nonMineTiles {
+            gameStatus = .won
+            revealAllMines()
+            return true
+        }
+        return false
     }
 
     func flagTile(atRow row: Int, column: Int) {
         guard gameStatus == .playing else { return }
+
         // Check if the tile is already revealed
         if grid[row][column].isRevealed {
             return
@@ -144,8 +159,13 @@ class MinesweeperViewModel: ObservableObject {
         // Toggle the flag state
         grid[row][column].isFlagged.toggle()
 
+        // Trigger haptic feedback
+        let feedbackGenerator = UIImpactFeedbackGenerator(style: .heavy)
+        feedbackGenerator.impactOccurred()
+
         // Update remaining mines count or any other related logic if necessary
         // For example, if you're keeping track of how many flags are placed
     }
+
 
 }

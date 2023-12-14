@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TileView: View {
+    @ObservedObject var viewModel: MinesweeperViewModel
     var tile: Tile
 
     var body: some View {
@@ -38,6 +39,18 @@ struct TileView: View {
         .frame(width: 30, height: 30)
         .border(Color.black)
     }
+    
+    private var tileBackground: some View {
+        Group {
+            if viewModel.gameStatus == .won && tile.isMine {
+                Rectangle().foregroundColor(.green)
+            } else {
+                Rectangle().foregroundColor(tile.isRevealed ? .white : .gray)
+            }
+        }
+        .frame(width: 30, height: 30)
+        .border(Color.black)
+    }
 
     func colorForNumber(_ number: Int) -> Color {
         switch number {
@@ -51,7 +64,7 @@ struct TileView: View {
 
 struct TileView_Previews: PreviewProvider {
     static var previews: some View {
-        TileView(tile: Tile(isMine: false, isRevealed: false, isFlagged: true))
+        TileView(viewModel: MinesweeperViewModel(), tile: Tile(isMine: false, isRevealed: false, isFlagged: true))
             .previewLayout(.sizeThatFits)
     }
 }
